@@ -32,8 +32,8 @@ h1 {
   text-transform: uppercase;
   font-family: "Roboto Slab", serif;
   letter-spacing: 2px;
-  font-size: 2.5rem;
-  margin-top: 1rem; }
+  font-size: 5vw;
+  margin-top: .5rem; }
 
 *,
 *::before,
@@ -44,3 +44,25 @@ h1 {
 img {
   max-width: 100%;
   height: auto; }
+
+body {
+  display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
+  grid-template-rows: min-content 1fr min-content; }
+
+.main {
+  display: grid;
+  grid-template-columns: .5fr 1fr .5fr;
+  width: 100vw; }
+
+.section__elements {
+  width: 100%;
+  display: grid;
+  grid-column: 2 /3;
+  grid-template-columns: repeat(18, minmax(4vw, 1fr)); }
+
+.section--top {
+  grid-template-rows: repeat(7, 4vw); }
+
+.section--bottom {
+  grid-template-rows: repeat(2, 4vw); }

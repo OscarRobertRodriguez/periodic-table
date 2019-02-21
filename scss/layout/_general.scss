@@ -9,3 +9,16 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+
+body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+
+.main {
+  display: grid;
+  grid-template-columns: .5fr 1fr .5fr;
+  width: 100vw;
+}
