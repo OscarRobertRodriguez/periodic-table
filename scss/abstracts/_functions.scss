@@ -1,0 +1,6 @@
+
+
+@function colors($shade) {
+  $value: map-get($periodic, $shade);
+  @return  $value;
+};
