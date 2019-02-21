@@ -1,0 +1,36 @@
+
+
+.element {
+
+  &__block {
+
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-rows: repeat(4, min-content);
+    overflow: hidden;
+
+    h3 {
+     font-size: .7vw;
+      text-transform: capitalize;
+    }
+
+    p {
+       padding: 0;
+      font-size: .7vw;
+
+    }
+
+    h2 {
+      font-size: .8vw;
+      padding: 0;
+    }
+
+    small {
+     font-size: .8vw;
+      padding: 0;
+      margin: 0;
+    }
+
+  }
+}
