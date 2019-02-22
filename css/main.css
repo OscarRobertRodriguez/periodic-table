@@ -39,7 +39,8 @@ h1 {
   font-family: "Roboto Slab", serif;
   letter-spacing: 2px;
   font-size: 5vw;
-  margin-top: .5rem; }
+  margin-top: .5rem;
+  color: #fff; }
 
 *,
 *::before,
@@ -53,14 +54,20 @@ img {
 
 body {
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
-  background: #192229;
-}
+  background: #192229; }
 
 .main {
   display: grid;
-  grid-template-columns: .5fr 1fr .5fr;
-  width: 100vw; }
+  grid-template-columns: .1fr 1fr .1fr;
+  width: 100vw;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: start;
+  align-content: start;
+  grid-row-gap: 25px; }
 
 .section__elements {
   width: 100%;
@@ -92,38 +99,51 @@ body {
   display: grid;
   height: 100%;
   width: 100%;
+  grid-template-rows: repeat(4, -webkit-min-content);
   grid-template-rows: repeat(4, min-content);
   overflow: hidden;
-  color: #fff;
+  color: grey;
   cursor: pointer;
-  -webkit-transition: all .2ms ease;
-  -o-transition: all .2ms ease;
-  transition: all .2ms ease;
+  -webkit-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
   -webkit-filter: brightness(1.5);
-  filter: brightness(1.5); }
+  filter: brightness(1.5);
+  z-index: 1;
+  min-height: 4vh; }
   .element__block h3 {
     font-size: .7vw;
     text-transform: capitalize;
-    opacity: .8;
-    letter-spacing: .2px; }
-  .element__block p {
-    padding: 0;
-    font-size: .7vw;
-    opacity: .8; }
+    letter-spacing: .2px;
+    opacity: .9;
+    cursor: pointer; }
   .element__block h2 {
     font-size: .8vw;
     padding: 0;
     text-transform: capitalize;
-    opacity: .8; }
+    cursor: pointer; }
   .element__block small {
     font-size: .8vw;
     padding: 0;
     margin: 0;
-    opacity: .8; }
+    cursor: pointer; }
   .element__block:hover {
     -webkit-filter: brightness(2);
     filter: brightness(2);
-    opacity: 1; }
+    opacity: 1;
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    transform: scale(2);
+    z-index: 10;
+    -webkit-transition: -webkit-transform 400ms ease-out;
+    transition: -webkit-transform 400ms ease-out;
+    -o-transition: transform 400ms ease-out;
+    transition: transform 400ms ease-out;
+    transition: transform 400ms ease-out, -webkit-transform 400ms ease-out; }
+    .element__block:hover h3 {
+      -o-text-overflow: initial;
+      text-overflow: initial;
+      font-size: .53vw; }
 
 .element--nonmetal {
   background: rgba(20, 70, 99, 0.98);
