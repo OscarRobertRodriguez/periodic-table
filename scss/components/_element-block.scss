@@ -9,28 +9,83 @@
     width: 100%;
     grid-template-rows: repeat(4, min-content);
     overflow: hidden;
+    color: #fff;
+    cursor: pointer;
+    transition: all .2ms ease;
+    filter: brightness(1.5);
+
 
     h3 {
      font-size: .7vw;
       text-transform: capitalize;
+      opacity: .8;
+      letter-spacing: .2px;
     }
 
     p {
        padding: 0;
       font-size: .7vw;
+      opacity: .8;
 
     }
 
     h2 {
       font-size: .8vw;
       padding: 0;
+      text-transform: capitalize;
+      opacity: .8;
     }
 
     small {
      font-size: .8vw;
       padding: 0;
       margin: 0;
+      opacity: .8;
     }
 
+    &:hover {
+      filter: brightness(2);
+      opacity: 1;
+    }
   }
+
+  &--nonmetal {
+    @include blockColor(colors(1));
+  }
+
+  &--noblegas {
+    @include blockColor(colors(8));
+  }
+
+  &--alkali {
+    @include blockColor(colors(5));
+  }
+  &--earthmetal {
+    @include blockColor(colors(6));
+  }
+
+  &--metalloid {
+    @include blockColor(colors(3));
+  }
+
+  &--metal {
+    @include blockColor(colors(4));
+  }
+
+  &--transitionmetal {
+    @include blockColor(colors(7));
+  }
+
+  &--lathanoid {
+    @include blockColor(colors(9));
+  }
+
+  &--actinoid {
+    @include blockColor(colors(10));
+  }
+
+  &--halogen {
+    @include blockColor(colors(2));
+  }
+
 }

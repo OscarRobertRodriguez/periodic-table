@@ -53,8 +53,9 @@ img {
 
 body {
   display: grid;
-  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
-  grid-template-rows: min-content 1fr min-content; }
+  grid-template-rows: min-content 1fr min-content;
+  background: #192229;
+}
 
 .main {
   display: grid;
@@ -66,8 +67,8 @@ body {
   display: grid;
   grid-column: 2 /3;
   grid-template-columns: repeat(18, minmax(4vw, 1fr));
-  grid-row-gap: 2px;
-  grid-column-gap: 2px; }
+  grid-row-gap: 5px;
+  grid-column-gap: 5px; }
 
 .section--top {
   grid-template-rows: repeat(7, 4vw); }
@@ -83,23 +84,83 @@ body {
   grid-column: 3/13;
   grid-row: 2/4; }
 
+.bf-3 {
+  grid-column: 1/4;
+  grid-row: 1/3; }
+
 .element__block {
   display: grid;
   height: 100%;
   width: 100%;
-  grid-template-rows: repeat(4, -webkit-min-content);
   grid-template-rows: repeat(4, min-content);
-  overflow: hidden; }
+  overflow: hidden;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all .2ms ease;
+  -o-transition: all .2ms ease;
+  transition: all .2ms ease;
+  -webkit-filter: brightness(1.5);
+  filter: brightness(1.5); }
   .element__block h3 {
     font-size: .7vw;
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    opacity: .8;
+    letter-spacing: .2px; }
   .element__block p {
     padding: 0;
-    font-size: .7vw; }
+    font-size: .7vw;
+    opacity: .8; }
   .element__block h2 {
     font-size: .8vw;
-    padding: 0; }
+    padding: 0;
+    text-transform: capitalize;
+    opacity: .8; }
   .element__block small {
     font-size: .8vw;
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    opacity: .8; }
+  .element__block:hover {
+    -webkit-filter: brightness(2);
+    filter: brightness(2);
+    opacity: 1; }
+
+.element--nonmetal {
+  background: rgba(20, 70, 99, 0.98);
+  border: 1px solid #2582b8; }
+
+.element--noblegas {
+  background: rgba(20, 76, 91, 0.98);
+  border: 1px solid #2692af; }
+
+.element--alkali {
+  background: rgba(85, 46, 50, 0.98);
+  border: 1px solid #975259; }
+
+.element--earthmetal {
+  background: rgba(87, 67, 35, 0.98);
+  border: 1px solid #a07b40; }
+
+.element--metalloid {
+  background: rgba(49, 42, 84, 0.98);
+  border: 1px solid #594c98; }
+
+.element--metal {
+  background: rgba(26, 80, 79, 0.98);
+  border: 1px solid #339d9b; }
+
+.element--transitionmetal {
+  background: rgba(83, 76, 47, 0.98);
+  border: 1px solid #948854; }
+
+.element--lathanoid {
+  background: rgba(57, 79, 54, 0.98);
+  border: 1px solid #658c5f; }
+
+.element--actinoid {
+  background: rgba(75, 85, 49, 0.98);
+  border: 1px solid #849656; }
+
+.element--halogen {
+  background: rgba(84, 52, 74, 0.98);
+  border: 1px solid #935b82; }
