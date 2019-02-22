@@ -25,4 +25,15 @@ body {
   justify-content: center;
   align-content: start;
   grid-row-gap: 25px;
+
+  @include mq(medium) {
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+  }
+
+  @media only screen
+  and (orientation : landscape)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    align-content: center;
+  }
 }

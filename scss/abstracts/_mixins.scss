@@ -6,3 +6,11 @@
   border: 1px solid lighten($shade, 20);
 
 };
+
+
+@mixin mq($size) {
+ $value : map-get($breakpoints, $size);
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}

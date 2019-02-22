@@ -68,32 +68,64 @@ body {
   -ms-flex-line-pack: start;
   align-content: start;
   grid-row-gap: 25px; }
+  @media screen and (max-width: 1150px) {
+    .main {
+      grid-template-columns: repeat(4, 1fr);
+      width: 100%; } }
+  @media only screen and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    .main {
+      -ms-flex-line-pack: center;
+      align-content: center; } }
+
+.footer {
+  padding: 10px 0;
+  color: #fff; }
 
 .section__elements {
   width: 100%;
   display: grid;
   grid-column: 2 /3;
   grid-template-columns: repeat(18, minmax(4vw, 1fr));
-  grid-row-gap: 5px;
-  grid-column-gap: 5px; }
+  grid-gap: 5px; }
+  @media screen and (max-width: 1150px) {
+    .section__elements {
+      grid-column: 1/ -1;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-gap: 10px;
+      padding: 0 10px; } }
 
 .section--top {
   grid-template-rows: repeat(7, 4vw); }
+  @media screen and (max-width: 1150px) {
+    .section--top {
+      grid-template-rows: auto; } }
 
 .section--bottom {
   grid-template-rows: repeat(2, 4vw); }
+  @media screen and (max-width: 1150px) {
+    .section--bottom {
+      grid-template-rows: auto; } }
 
 .bf-1 {
   grid-column: 2/ 18;
   grid-row: 1/ 2; }
+  @media screen and (max-width: 1150px) {
+    .bf-1 {
+      display: none; } }
 
 .bf-2 {
   grid-column: 3/13;
   grid-row: 2/4; }
+  @media screen and (max-width: 1150px) {
+    .bf-2 {
+      display: none; } }
 
 .bf-3 {
   grid-column: 1/4;
   grid-row: 1/3; }
+  @media screen and (max-width: 1150px) {
+    .bf-3 {
+      display: none; } }
 
 .element__block {
   display: grid;
@@ -101,7 +133,6 @@ body {
   width: 100%;
   grid-template-rows: repeat(4, -webkit-min-content);
   grid-template-rows: repeat(4, min-content);
-  overflow: hidden;
   color: grey;
   cursor: pointer;
   -webkit-transition: all 500ms ease-in-out;
@@ -109,24 +140,47 @@ body {
   transition: all 500ms ease-in-out;
   -webkit-filter: brightness(1.5);
   filter: brightness(1.5);
-  z-index: 1;
-  min-height: 4vh; }
+  z-index: 1; }
+  @media screen and (max-width: 1150px) {
+    .element__block {
+      height: 130px;
+      grid-template-rows: auto;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
   .element__block h3 {
     font-size: .7vw;
     text-transform: capitalize;
     letter-spacing: .2px;
     opacity: .9;
     cursor: pointer; }
+    @media screen and (max-width: 1150px) {
+      .element__block h3 {
+        font-size: 1.5rem;
+        letter-spacing: 1px; } }
+    @media screen and (max-width: 900px) {
+      .element__block h3 {
+        font-size: 1.5rem; } }
   .element__block h2 {
     font-size: .8vw;
     padding: 0;
     text-transform: capitalize;
     cursor: pointer; }
+    @media screen and (max-width: 1150px) {
+      .element__block h2 {
+        font-size: 1.8rem; } }
+    @media screen and (max-width: 900px) {
+      .element__block h2 {
+        font-size: 2rem; } }
   .element__block small {
     font-size: .8vw;
     padding: 0;
     margin: 0;
-    cursor: pointer; }
+    cursor: pointer;
+    font-weight: 900; }
+    @media screen and (max-width: 1150px) {
+      .element__block small {
+        font-size: 1.5rem; } }
   .element__block:hover {
     -webkit-filter: brightness(2);
     filter: brightness(2);
@@ -140,10 +194,21 @@ body {
     -o-transition: transform 400ms ease-out;
     transition: transform 400ms ease-out;
     transition: transform 400ms ease-out, -webkit-transform 400ms ease-out; }
+    @media screen and (max-width: 1150px) {
+      .element__block:hover {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1); } }
     .element__block:hover h3 {
       -o-text-overflow: initial;
       text-overflow: initial;
       font-size: .53vw; }
+      @media screen and (max-width: 1150px) {
+        .element__block:hover h3 {
+          font-size: 1.5rem; } }
+  @media screen and (max-width: 1150px) {
+    .element__block-empty {
+      display: none; } }
 
 .element--nonmetal {
   background: rgba(20, 70, 99, 0.98);
