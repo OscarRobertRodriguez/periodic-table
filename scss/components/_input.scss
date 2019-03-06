@@ -29,6 +29,10 @@
     color: #fff;
     transition: all .2s ease;
 
+    @include mq(medium) {
+      font-size: 1.8rem;
+    }
+
 
 
    &:focus {

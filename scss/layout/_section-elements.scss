@@ -56,7 +56,9 @@
 
 
   @include mq(medium) {
-    display: none;
+    grid-column: 1/ -1;
+    grid-row: 1/ -1;
+    margin: 3rem 0;
   }
 
 }
